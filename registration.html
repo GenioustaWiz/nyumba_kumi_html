@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyumba Kumi Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nyumba Kumi Initiative</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='chief.html'">Chief's Portal</button>
+            <button onclick="location.href='assistant-chief.html'">Assistant Chief's Portal</button>
+            <button onclick="location.href='user.html'">User Profile</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="registration">
+            <h2>Registration</h2>
+            <form id="registration-form">
+                <label for="id-type">ID Type:</label>
+                <select id="id-type" name="id-type" required>
+                    <option value="kenyan-id">Kenyan ID</option>
+                    <option value="alien-id">Alien ID</option>
+                </select>
+
+                <label for="id-number">ID Number:</label>
+                <input type="text" id="id-number" name="id-number" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                
+                <button type="submit">Verify ID</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="index.js"></script>
+</body>
+</html>

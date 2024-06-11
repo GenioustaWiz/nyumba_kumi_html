@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nyumba Kumi Initiative</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='chief.html'">Chief's Portal</button>
+            <button onclick="location.href='assistant-chief.html'">Assistant Chief's Portal</button>
+            <button onclick="location.href='user.html'">User Profile</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="additional-info">
+            <h2>Additional Information</h2>
+            <form id="additional-info-form">
+                <label for="marital-status">Marital Status:</label>
+                <input type="text" id="marital-status" name="marital-status" required>
+                
+                <label for="children-number">Number of Children:</label>
+                <input type="number" id="children-number" name="children-number" required>
+                
+                <label for="income-source">Source of Income:</label>
+                <input type="text" id="income-source" name="income-source" required>
+
+                <h3>Current Location</h3>
+                <label for="current-address">Address:</label>
+                <input type="text" id="current-address" name="current-address" required>
+                
+                <label for="current-county">County:</label>
+                <input type="text" id="current-county" name="current-county" required>
+                
+                <label for="current-country">Country:</label>
+                <input type="text" id="current-country" name="current-country" required>
+                
+                <h3>Previous Location</h3>
+                <label for="previous-address">Address:</label>
+                <input type="text" id="previous-address" name="previous-address" required>
+                
+                <label for="previous-county">County:</label>
+                <input type="text" id="previous-county" name="previous-county" required>
+                
+                <label for="previous-country">Country:</label>
+                <input type="text" id="previous-country" name="previous-country" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
+
