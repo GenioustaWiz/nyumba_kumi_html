@@ -21,16 +21,26 @@ header h1{
     margin: 0
 }
 
+.menu-button {
+    display: none;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     justify-content: center;
 }
+
 main {
     display: flex;
     justify-content: center;
     height: 85vh;
     align-items: center;
-    padding: 5em 1em 1em;
+    padding: 7em 1em 1em;
 }
 #home {
     display: flex;
@@ -85,9 +95,18 @@ section {
     header {
         padding: 0.5em 0;
     }
+    .menu-button {
+        display: block;
+    }
 
     nav {
+        display: none;
         flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+    }
+    nav.show {
+        display: flex;
     }
 
     button {
@@ -119,7 +138,7 @@ input, button, select {
     display: none;
 }
 
-table {
+/* table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1em;
@@ -137,4 +156,191 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
     background-color: #ffffff;
+} */
+/* id verifcation */
+#verification {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 0.5em;
+}
+
+input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#verification-form input.error,
+#verification-form button.error {
+    border-color: red;
+}
+
+#error-message {
+    color: red;
+    margin-top: 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+/* GROUPS, USER-PROFILES */
+#user-profile, #groups, #group-info {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+}
+
+#user-profile h2, #groups h2, #group-info h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.profile-info, .group-list {
+    margin-bottom: 1em;
+}
+
+.profile-info p, .group-item p {
+    margin: 0.5em 0;
+}
+
+.edit-button, .view-groups-button, .join-group-button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+.edit-button:hover, .view-groups-button:hover, .join-group-button:hover {
+    background-color: #45a049;
+}
+
+.group-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.group-item {
+    background: #e0f7fa;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 1em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.group-item button {
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .group-item {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* CHIEF SUBCHIEF HOUSEHOLD VIEWS */
+
+#chief-dashboard, #registered-households {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.card {
+    background: #e0f7fa;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.view-households-button {
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 1em auto 0;
+}
+
+.view-households-button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+td button:hover {
+    background-color: #45a049;
+}
+
+tr:nth-child(even) {
+    background-color: #bab7b7;
 }

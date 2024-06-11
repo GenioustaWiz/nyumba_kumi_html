@@ -3,65 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubChief's Portal</title>
+    <title>Assistance Chief's Portal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Nyumba Kumi Initiative</h1>
-        <nav>
+        <button class="menu-button" id="toggle-menu" onclick="toggleMenu()">menu</button>
+        
+        <nav id="navigation">
             <button onclick="location.href='index.html'">Home</button>
             <button onclick="location.href='chief.html'">Chief's Portal</button>
-            <button onclick="location.href='assistant-chief.html'">Assistant Chief's Portal</button>
-            <button onclick="location.href='user.html'">User Profile</button>
         </nav>
     </header>
     
     <main>
-        <section id="registered-households">
-            <h2>Registered Households</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID Number</th>
-                        <th>Marital Status</th>
-                        <th>Children</th>
-                        <th>Income Source</th>
-                        <th>Current Location</th>
-                        <th>Previous Location</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>12345678</td>
-                        <td>Married</td>
-                        <td>2</td>
-                        <td>Business</td>
-                        <td>123 Current St, Current County, Current Country</td>
-                        <td>456 Previous St, Previous County, Previous Country</td>
-                        <td><button onclick="approveUser('12345678')">Approve</button></td>
-                    </tr>
-                    <tr>
-                        <td>87654321</td>
-                        <td>Single</td>
-                        <td>1</td>
-                        <td>Employed</td>
-                        <td>789 Current St, Current County, Current Country</td>
-                        <td>012 Previous St, Previous County, Previous Country</td>
-                        <td><button onclick="approveUser('87654321')">Approve</button></td>
-                    </tr>
-                </tbody>
-            </table>
+        <section id="chief-dashboard">
+            <h2>Assistance Chief's Dashboard</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Unapproved Users</h3>
+                    <p>10</p>
+                </div>
+                <div class="card">
+                    <h3>Approved Users</h3>
+                    <p>50</p>
+                </div>
+                <div class="card">
+                    <h3>Available Groups</h3>
+                    <p>5</p>
+                </div>
+                <div class="card">
+                    <h3>Group Join Requests</h3>
+                    <p>8</p>
+                </div>
+            </div>
+            <button class="view-households-button" onclick="location.href='registered_households.html'">View Registered Households</button>
         </section>
     </main>
-    
-    <script>
-        function approveUser(idNumber) {
-            alert('User with ID ' + idNumber + ' has been approved.');
-            // Add logic to approve user
-        }
-    </script>
 </body>
 </html>
-

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Group Information</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='groups.html'">All Groups</button>
+            <button onclick="location.href='assistant-chief.html'">Assistant Chief's Portal</button>
+            <button onclick="location.href='chief.html'">Chief's Portal</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="group-info">
+            <h2>Group 1 Members</h2>
+            <ul>
+                <li>John Doe</li>
+                <li>Jane Smith</li>
+                <li>Michael Brown</li>
+                <!-- Repeat for more members -->
+                <!-- Example members omitted for brevity -->
+            </ul>
+            <button class="join-group-button" onclick="requestJoinGroup()">Request to Join Group</button>
+        </section>
+    </main>
+
+    <script>
+        function requestJoinGroup() {
+            alert("Join group request has been sent.");
+        }
+    </script>
+</body>
+</html>

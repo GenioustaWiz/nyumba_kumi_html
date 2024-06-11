@@ -1,63 +1,48 @@
 // scripts.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    const registrationForm = document.getElementById('registration-form');
-    const additionalInfoForm = document.getElementById('additional-info-form');
-
-    if (registrationForm) {
-        registrationForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const idNumber = document.getElementById('id-number').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
-
-            if (password !== confirmPassword) {
-                alert('Passwords do not match');
-                return;
-            }
-
-            if (verifyID(idNumber)) {
-                alert('ID verified successfully');
-                location.href = 'additional-info.html';
-            } else {
-                alert('ID verification failed');
-            }
-        });
-    }
-
-    if (additionalInfoForm) {
-        additionalInfoForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const maritalStatus = document.getElementById('marital-status').value;
-            const childrenNumber = document.getElementById('children-number').value;
-            const incomeSource = document.getElementById('income-source').value;
-
-            console.log('Additional Information:', {
-                maritalStatus,
-                childrenNumber,
-                incomeSource
-            });
-
-            alert('Additional information submitted');
-            location.href = 'user.html';
-        });
-    }
     
+    
+    const form1 = document.getElementById('additional-info-form');
+    if (form1) {
+        form1.addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your form handling logic here
+            alert('Form submitted');
+            window.location.href = 'user.html';
+        });
+    }
+
     function verifyID(id) {
         // Placeholder function for ID verification logic
         return true;
     }
+// ID VERIFICATION
+    const validIds = ['12345', '54321', '67890', '09876'];
+    const form = document.getElementById('verification-form');
+    const idInput = document.getElementById('id-number');
+    const errorMessage = document.getElementById('error-message');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const idNumber = idInput.value;
 
+            if (validIds.includes(idNumber)) {
+                alert('ID verified');
+                window.location.href = 'additional-info.html';
+            } else {
+                errorMessage.classList.remove('hidden');
+                idInput.classList.add('error');
+                form.querySelector('button').classList.add('error');
+                alert('ID Unverified. please try again');
+            }
+        });
+    }
     
 });
 
 
-const menuIcon = document.querySelector('.menu-icon');
-    const nav = document.querySelector('header nav');
-
-    menuIcon.addEventListener('click', function() {
-        nav.classList.toggle('show');
-    });
+function toggleMenu() {
+    var nav = document.querySelector('header nav');
+    nav.classList.toggle('show');
+}

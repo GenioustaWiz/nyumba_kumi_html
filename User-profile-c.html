@@ -9,15 +9,19 @@
 </head>
 <body>
     <header>
-        <h1>User Profile</h1>
-        <nav>
-            <button onclick="location.href='index.html'">Home</button>
+        <h1>Nyumba Kumi Initiative</h1>
+        <button class="menu-button" id="toggle-menu" onclick="toggleMenu()">menu</button>
+        
+        <nav id="navigation">
+            <button onclick="location.href='chief.html'">Chief's Portal</button>
+            <button onclick="location.href='assistant-chief.html'">Assistant Chief's Portal</button>
+            <button onclick="location.href='user.html'">User Profile</button>
         </nav>
     </header>
     
     <main>
         <section id="user-profile">
-            <h2>Your Profile</h2>
+            <h2>John Doe's Profile</h2>
             <div class="profile-info">
                 <p><strong>Household Name:</strong> Smith Household</p>
                 <p><strong>First Name:</strong> John</p>
@@ -30,14 +34,19 @@
                 <p><strong>Number of Children:</strong> 2</p>
                 <p><strong>Gender:</strong> Male</p>
             </div>
-            <button class="edit-button" onclick="requestEdit()">Request Edit</button>
-            <button class="view-groups-button" onclick="location.href='groups.html'">View All Groups</button>
+            <button class="edit-button" onclick="requestDelete()">Delete Member</button>
+            <button class="edit-button" onclick="requestAdd()">Approve Member</button>
+            <button class="edit-button" onclick="requestAdd()">Approve Editing</button>
+            <button class="view-groups-button" >View Assigned Group</button>
         </section>
     </main>
 
     <script>
-        function requestEdit() {
-            alert("Edit request has been sent. Check later to see if it has been approved");
+        function requestDelete() {
+            alert("Member has been Deleted succefully. ");
+        }
+        function requestAdd() {
+            alert("Member has been Approved succefully. ");
         }
     </script>
 </body>
