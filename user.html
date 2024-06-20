@@ -6,13 +6,17 @@
     <title>User Profile</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        main{
+            display: grid;
+            height: fit-content !important;
+        }
         section {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
             gap: 20px;
         }
 
-        .profile-info, .spouse-info, .children-info {
+        .profile-info, .spouse-info, .child-sec {
             display: grid;
             grid-template-columns: 1fr;
             gap: 10px;
@@ -20,25 +24,39 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .children-info {
+            display: flex !important;
+            justify-items: center;
+            flex-direction: column;
+        }
 
         @media (min-width: 600px) {
             section {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
             }
 
-            .profile-info, .spouse-info, .children-info {
+            .profile-info, .spouse-info, .child-sec{
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (min-width: 900px) {
             section {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
             }
 
-            .profile-info, .spouse-info, .children-info {
+            .profile-info, .spouse-info, .child-sec{
                 grid-template-columns: repeat(3, 1fr);
             }
+        }
+        #user-profile{
+            background: #ffffffe3;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: -webkit-fill-available !important;
+            /* max-width: 600px; */
+            text-align: left;
         }
     </style>
 </head>
@@ -76,38 +94,47 @@
             </div>
             <div class="children-info">
                 <h3>Children Information</h3>
-                <h4>Above 18</h4>
-                <div class="child-info">
-                    <p><strong>Name:</strong> Alice Doe</p>
-                    <p><strong>Year of Birth:</strong> 2000</p>
-                    <p><strong>ID Number:</strong> 87654321</p>
-                    <p><strong>Education Level & Institution:</strong> Bachelor's Degree, University of Nairobi</p>
-                    <p><strong>Occupation:</strong> Engineer</p>
+                <div>
+                    <h4>Above 18</h4>
+                    <div class="child-sec">
+                        <div class="child-info">
+                            <p><strong>Name:</strong> Alice Doe</p>
+                            <p><strong>Year of Birth:</strong> 2000</p>
+                            <p><strong>ID Number:</strong> 87654321</p>
+                            <p><strong>Education Level & Institution:</strong> Bachelor's Degree, University of Nairobi</p>
+                            <p><strong>Occupation:</strong> Engineer</p>
+                        </div>
+                        <div class="child-info">
+                            <p><strong>Name:</strong> Bob Doe</p>
+                            <p><strong>Year of Birth:</strong> 1998</p>
+                            <p><strong>ID Number:</strong> 87654322</p>
+                            <p><strong>Education Level & Institution:</strong> Master's Degree, Kenyatta University</p>
+                            <p><strong>Occupation:</strong> Doctor</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="child-info">
-                    <p><strong>Name:</strong> Bob Doe</p>
-                    <p><strong>Year of Birth:</strong> 1998</p>
-                    <p><strong>ID Number:</strong> 87654322</p>
-                    <p><strong>Education Level & Institution:</strong> Master's Degree, Kenyatta University</p>
-                    <p><strong>Occupation:</strong> Doctor</p>
-                </div>
-                <h4>Below 18</h4>
-                <div class="child-info">
-                    <p><strong>Full Name:</strong> Charlie Doe</p>
-                    <p><strong>Gender:</strong> Male</p>
-                    <p><strong>School:</strong> Green Valley High School</p>
-                    <p><strong>Birth Certificate Number:</strong> BC123456</p>
-                </div>
-                <div class="child-info">
-                    <p><strong>Full Name:</strong> Daisy Doe</p>
-                    <p><strong>Gender:</strong> Female</p>
-                    <p><strong>School:</strong> Sunshine Primary School</p>
-                    <p><strong>Birth Certificate Number:</strong> BC123457</p>
+                <div>
+                    <h4>Below 18</h4>
+                    <div class="child-sec">
+                        <div class="child-info">
+                            <p><strong>Full Name:</strong> Charlie Doe</p>
+                            <p><strong>Gender:</strong> Male</p>
+                            <p><strong>School:</strong> Green Valley High School</p>
+                            <p><strong>Birth Certificate Number:</strong> BC123456</p>
+                        </div>
+                        <div class="child-info">
+                            <p><strong>Full Name:</strong> Daisy Doe</p>
+                            <p><strong>Gender:</strong> Female</p>
+                            <p><strong>School:</strong> Sunshine Primary School</p>
+                            <p><strong>Birth Certificate Number:</strong> BC123457</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="edit-button" onclick="requestEdit()">Request Edit</button>
-            <button class="view-groups-button" onclick="location.href='groups.html'">View All Groups</button>
+            
         </section>
+        <button class="edit-button" onclick="requestEdit()">Request Edit</button>
+            <button class="view-groups-button" onclick="location.href='groups.html'">View All Groups</button>
     </main>
 
     <script>
