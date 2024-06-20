@@ -29,5 +29,31 @@
     </main>
     
     <script src="scripts.js"></script>
+    <script>
+        // ID VERIFICATION
+        const validIds = ['12345', '54321', '67890', '09876'];
+        const form = document.getElementById('verification-form');
+        const idInput = document.getElementById('id-number');
+        const errorMessage = document.getElementById('error-message');
+
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const idNumber = idInput.value;
+
+                if (validIds.includes(idNumber)) {
+                    alert('ID verified');
+                    window.location.href = 'user.html';
+                } else {
+                    errorMessage.classList.remove('hidden');
+                    idInput.classList.add('error');
+                    form.querySelector('button').classList.add('error');
+                    alert('ID Unverified. Redirecting to additional information form.');
+                    window.location.href = 'additional-info.html';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
+
