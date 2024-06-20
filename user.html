@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .profile-info, .spouse-info, .children-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        @media (min-width: 600px) {
+            main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .profile-info, .spouse-info, .children-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            main {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .profile-info, .spouse-info, .children-info {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,16 +54,18 @@
         <section id="user-profile">
             <h2>Your Profile</h2>
             <div class="profile-info">
-                <p><strong>Household Name:</strong> Smith Household</p>
+                <p><strong>Family Name:</strong> Smith</p>
                 <p><strong>First Name:</strong> John</p>
                 <p><strong>Middle Name:</strong> Michael</p>
-                <p><strong>Last Name:</strong> Doe</p>
+                <p><strong>Sir Name:</strong> Doe</p>
                 <p><strong>Phone Number:</strong> +254712345678</p>
                 <p><strong>Resident Location:</strong> Nairobi</p>
                 <p><strong>Resident Sub Location:</strong> Westlands</p>
                 <p><strong>Marital Status:</strong> Married</p>
                 <p><strong>Number of Children:</strong> 2</p>
                 <p><strong>Gender:</strong> Male</p>
+                <p><strong>Number of Spouse:</strong> 1</p>
+                <p><strong>Year of Birth:</strong> 1980</p>
             </div>
             <div class="spouse-info">
                 <h3>Spouse Information</h3>
@@ -81,5 +119,6 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
 
