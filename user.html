@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
     <header>
@@ -30,6 +29,44 @@
                 <p><strong>Number of Children:</strong> 2</p>
                 <p><strong>Gender:</strong> Male</p>
             </div>
+            <div class="spouse-info">
+                <h3>Spouse Information</h3>
+                <p><strong>Full Name:</strong> Jane Doe</p>
+                <p><strong>ID:</strong> 12345678</p>
+                <p><strong>Occupation:</strong> Teacher</p>
+                <p><strong>Year of Birth:</strong> 1985</p>
+            </div>
+            <div class="children-info">
+                <h3>Children Information</h3>
+                <h4>Above 18</h4>
+                <div class="child-info">
+                    <p><strong>Name:</strong> Alice Doe</p>
+                    <p><strong>Year of Birth:</strong> 2000</p>
+                    <p><strong>ID Number:</strong> 87654321</p>
+                    <p><strong>Education Level & Institution:</strong> Bachelor's Degree, University of Nairobi</p>
+                    <p><strong>Occupation:</strong> Engineer</p>
+                </div>
+                <div class="child-info">
+                    <p><strong>Name:</strong> Bob Doe</p>
+                    <p><strong>Year of Birth:</strong> 1998</p>
+                    <p><strong>ID Number:</strong> 87654322</p>
+                    <p><strong>Education Level & Institution:</strong> Master's Degree, Kenyatta University</p>
+                    <p><strong>Occupation:</strong> Doctor</p>
+                </div>
+                <h4>Below 18</h4>
+                <div class="child-info">
+                    <p><strong>Full Name:</strong> Charlie Doe</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>School:</strong> Green Valley High School</p>
+                    <p><strong>Birth Certificate Number:</strong> BC123456</p>
+                </div>
+                <div class="child-info">
+                    <p><strong>Full Name:</strong> Daisy Doe</p>
+                    <p><strong>Gender:</strong> Female</p>
+                    <p><strong>School:</strong> Sunshine Primary School</p>
+                    <p><strong>Birth Certificate Number:</strong> BC123457</p>
+                </div>
+            </div>
             <button class="edit-button" onclick="requestEdit()">Request Edit</button>
             <button class="view-groups-button" onclick="location.href='groups.html'">View All Groups</button>
         </section>
@@ -44,4 +81,5 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
