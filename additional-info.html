@@ -10,6 +10,43 @@
         section {
             margin-top: 600px;
         }
+            form {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+    
+            label, input {
+                width: 100%;
+            }
+    
+            @media (min-width: 600px) {
+                form {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+    
+            @media (min-width: 900px) {
+                form {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+    
+            button {
+                grid-column: span 1;
+            }
+            
+            @media (min-width: 600px) {
+                button {
+                    grid-column: span 2;
+                }
+            }
+            
+            @media (min-width: 900px) {
+                button {
+                    grid-column: span 3;
+                }
+            }
     </style>
 </head>
 <body>
@@ -26,41 +63,54 @@
         <section id="additional-info">
             <h2>Additional Information</h2>
             <form id="additional-info-form">
-                <label for="family-name">Family Name:</label>
-                <input type="text" id="family-name" name="family-name" required>
-
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first-name" required>
-
-                <label for="middle-name">Middle Name:</label>
-                <input type="text" id="middle-name" name="middle-name" required>
-
-                <label for="sir-name">Sir Name:</label>
-                <input type="text" id="sir-name" name="sir-name" required>
-
-                <label for="phone-number">Phone Number:</label>
-                <input type="tel" id="phone-number" name="phone-number" required>
-
-                <label for="resident-location">Resident Location:</label>
-                <input type="text" id="resident-location" name="resident-location" required>
-
-                <label for="resident-sublocation">Resident Sub Location:</label>
-                <input type="text" id="resident-sublocation" name="resident-sublocation" required>
-
-                <label for="marital-status">Marital Status:</label>
-                <input type="text" id="marital-status" name="marital-status" required>
-
-                <label for="number-of-children">Number of Children:</label>
-                <input type="number" id="number-of-children" name="number-of-children" required>
-
-                <label for="gender">Gender:</label>
-                <input type="text" id="gender" name="gender" required>
-
-                <label for="number-of-spouse">Number of Spouse:</label>
-                <input type="number" id="number-of-spouse" name="number-of-spouse" required>
-
-                <label for="year-of-birth">Year of Birth:</label>
-                <input type="number" id="year-of-birth" name="year-of-birth" required>
+                <div>
+                    <label for="family-name">Family Name:</label>
+                    <input type="text" id="family-name" name="family-name" required>
+                </div>
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div>
+                    <label for="middle-name">Middle Name:</label>
+                    <input type="text" id="middle-name" name="middle-name" required>
+                </div>
+                <div>
+                    <label for="sir-name">Sir Name:</label>
+                    <input type="text" id="sir-name" name="sir-name" required>
+                </div>
+                <div>
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                </div>
+                <div>
+                    <label for="resident-location">Resident Location:</label>
+                    <input type="text" id="resident-location" name="resident-location" required>
+                </div>
+                <div>
+                    <label for="resident-sublocation">Resident Sub Location:</label>
+                    <input type="text" id="resident-sublocation" name="resident-sublocation" required>
+                </div>
+                <div>
+                    <label for="marital-status">Marital Status:</label>
+                    <input type="text" id="marital-status" name="marital-status" required>
+                </div>
+                <div>
+                    <label for="number-of-children">Number of Children:</label>
+                    <input type="number" id="number-of-children" name="number-of-children" required>
+                </div>
+                <div>
+                    <label for="gender">Gender:</label>
+                    <input type="text" id="gender" name="gender" required>
+                </div>
+                <div>
+                    <label for="number-of-spouse">Number of Spouse:</label>
+                    <input type="number" id="number-of-spouse" name="number-of-spouse" required>
+                </div>
+                <div>
+                    <label for="year-of-birth">Year of Birth:</label>
+                    <input type="number" id="year-of-birth" name="year-of-birth" required>
+                </div>
                 
                 <button type="submit">Submit</button>
             </form>
