@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             // Add your form handling logic here
             alert('Form submitted');
-            window.location.href = 'user.html';
+            window.location.href = 'user-profile1.html';
         });
     }
 

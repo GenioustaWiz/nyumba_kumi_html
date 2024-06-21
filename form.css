@@ -1,0 +1,41 @@
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+label, input {
+    width: 100%;
+}
+input, button, select {
+    width: fit-content !important;
+}
+
+@media (min-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+button {
+    grid-column: span 1;
+}
+
+@media (min-width: 600px) {
+    button {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 900px) {
+    button {
+        grid-column: span 3;
+    }
+}
+

@@ -31,7 +31,7 @@
     <script src="scripts.js"></script>
     <script>
         // ID VERIFICATION
-        const validIds = ['12345', '54321', '67890', '09876'];
+        const validIds = ['12345', '23456', '34567'];
         const form = document.getElementById('verification-form');
         const idInput = document.getElementById('id-number');
         const errorMessage = document.getElementById('error-message');
@@ -41,10 +41,16 @@
                 event.preventDefault();
                 const idNumber = idInput.value;
 
-                if (validIds.includes(idNumber)) {
+                if (idNumber === '12345') {
                     alert('ID verified');
-                    window.location.href = 'user.html';
-                } else {
+                    window.location.href = 'user-profile1.html';
+                } else if (idNumber === '23456') {
+                    alert('ID verified');
+                    window.location.href = 'user-profile2.html';
+                }else if (idNumber === '34567') {
+                    alert('ID verified');
+                    window.location.href = 'user-profile3.html';
+                }  else {
                     errorMessage.classList.remove('hidden');
                     idInput.classList.add('error');
                     form.querySelector('button').classList.add('error');

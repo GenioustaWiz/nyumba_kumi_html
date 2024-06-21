@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form.css">
+    
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+        </nav>
+    </header>
+    <main>
+        <section id="additional-info">
+            <form id="familyForm">
+                <div id="spouse">
+                    <h2>Spouse</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="spouseName">Name:</label>
+                            <input type="text" id="spouseName" name="spouseName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="spouseID">ID:</label>
+                            <input type="text" id="spouseID" name="spouseID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="spouseFullName">Full Name:</label>
+                            <input type="text" id="spouseFullName" name="spouseFullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="spouseOccupation">Occupation:</label>
+                            <input type="text" id="spouseOccupation" name="spouseOccupation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="spouseYearOfBirth">Year of Birth:</label>
+                            <input type="number" id="spouseYearOfBirth" name="spouseYearOfBirth" required>
+                        </div>
+                    </div>
+                </div>
+                <div id="children">
+                    <h2>Children</h2>
+                    <div id="childrenFormsContainer"></div>
+                    <button type="button" onclick="addChildForm()">Add Child</button>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+    <script src="family-form.js"></script>
+</body>
+</html>

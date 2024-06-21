@@ -38,7 +38,7 @@ nav {
 main {
     display: flex;
     justify-content: center;
-    height: 85vh;
+    /* height: 85vh; */
     align-items: center;
     padding: 7em 1em 1em;
 }
@@ -68,6 +68,7 @@ button:hover {
 }
 
 section {
+    width: 100%;
     margin-bottom: 2em;
     padding: 2em;
     background-color: rgba(255, 255, 255, 0.8);

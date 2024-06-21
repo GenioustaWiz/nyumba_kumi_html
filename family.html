@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .actions{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-items: center;
+            grid-gap: 10px;
+        }
+        .action-button{
+            display: flex;
+            background-color: #979797;
+            height: 70px;
+            width: -webkit-fill-available;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Family</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="actions">
+            <div class="action-button" onclick="location.href='add-member.html'">Add New Member</div>
+            <div class="action-button" onclick="location.href='apply-death-certificate.html'">Apply for Death Certificate</div>
+            <div class="action-button" onclick="location.href='request-relocation.html'">Request for Member's Relocation</div>
+            <div class="action-button" onclick="location.href='report.html'">Report</div>
+        </section>
+    </main>
+</body>
+</html>

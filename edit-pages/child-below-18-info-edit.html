@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Below 18 Information</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../form.css">
+</head>
+<body>
+    <header>
+        <h1>Child Below 18 Information</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="additional-info">
+            <form class="child-info">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="child-full-name">Full Name:</label>
+                        <input type="text" id="child-full-name" name="child-full-name" placeholder="Charlie Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="child-gender">Gender:</label>
+                        <input type="text" id="child-gender" name="child-gender" placeholder="Male">
+                    </div>
+                    <div class="form-group">
+                        <label for="child-school">School:</label>
+                        <input type="text" id="child-school" name="child-school" placeholder="Green Valley High School">
+                    </div>
+                    <div class="form-group">
+                        <label for="child-birth-certificate">Birth Certificate Number:</label>
+                        <input type="text" id="child-birth-certificate" name="child-birth-certificate" placeholder="BC123456">
+                    </div>
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="../scripts.js"></script>
+</body>
+</html>

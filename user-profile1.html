@@ -41,10 +41,6 @@
         }
 
         @media (min-width: 900px) {
-            <!-- section {
-                grid-template-rows: repeat(3, 1fr);
-            } -->
-
             .profile-info, .spouse-info, .child-sec{
                 grid-template-columns: repeat(3, auto);
             }
@@ -61,6 +57,23 @@
         h3{
             display: flex;
             justify-content: center;
+        }
+
+        .child-info, .spouse-info{
+            position: relative;
+        }
+        
+        .edit-button {
+            width: fit-content;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #419b26;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -100,6 +113,7 @@
             <div>
                 <h3>Spouse Information</h3>
                 <div class="spouse-info">
+                    <button class="edit-button" onclick="location.href='edit-pages/spouse-info-edit.html'">Edit</button>
                     <p><strong>Full Name:</strong> Jane Doe</p>
                     <p><strong>ID:</strong> 12345678</p>
                     <p><strong>Occupation:</strong> Teacher</p>
@@ -112,6 +126,7 @@
                     <h4>Above 18</h4>
                     <div class="child-sec">
                         <div class="child-info">
+                            <button class="edit-button" onclick="location.href='edit-pages/child-above-18-info-edit.html'">Edit</button>
                             <p><strong>Name:</strong> Alice Doe</p>
                             <p><strong>Year of Birth:</strong> 2000</p>
                             <p><strong>ID Number:</strong> 87654321</p>
@@ -119,6 +134,7 @@
                             <p><strong>Occupation:</strong> Engineer</p>
                         </div>
                         <div class="child-info">
+                            <button class="edit-button" onclick="location.href='edit-pages/child-above-18-info-edit.html'">Edit</button>
                             <p><strong>Name:</strong> Bob Doe</p>
                             <p><strong>Year of Birth:</strong> 1998</p>
                             <p><strong>ID Number:</strong> 87654322</p>
@@ -131,12 +147,14 @@
                     <h4>Below 18</h4>
                     <div class="child-sec">
                         <div class="child-info">
+                            <button class="edit-button" onclick="location.href='edit-pages/child-below-18-info-edit.html'">Edit</button>
                             <p><strong>Full Name:</strong> Charlie Doe</p>
                             <p><strong>Gender:</strong> Male</p>
                             <p><strong>School:</strong> Green Valley High School</p>
                             <p><strong>Birth Certificate Number:</strong> BC123456</p>
                         </div>
                         <div class="child-info">
+                            <button class="edit-button" onclick="location.href='edit-pages/child-below-18-info-edit.html'">Edit</button>
                             <p><strong>Full Name:</strong> Daisy Doe</p>
                             <p><strong>Gender:</strong> Female</p>
                             <p><strong>School:</strong> Sunshine Primary School</p>
