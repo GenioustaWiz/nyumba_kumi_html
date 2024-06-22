@@ -6,12 +6,11 @@
     <title>Family</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .actions{
-            width: 90%;
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            justify-items: center;
-            grid-gap: 10px;
+        .card{
+            cursor: alias;
+        }
+        .card:hover{
+            background: #a7bbbe;
         }
         .action-button{
             display: flex;
@@ -37,11 +36,11 @@
     </header>
     
     <main>
-        <section class="actions">
-            <div class="action-button" onclick="location.href='family-form.html'">Add New Member</div>
-            <div class="action-button" onclick="location.href='apply-death-certificate.html'">Apply for Death Certificate</div>
-            <div class="action-button" onclick="location.href='request-relocation.html'">Request for Member's Relocation</div>
-            <div class="action-button" onclick="location.href='report.html'">Report</div>
+        <section class="grid-container">
+            <div class="action-button card" onclick="location.href='family-form.html'">Add New Member</div>
+            <div class="action-button card" onclick="location.href='apply-death-certificate.html'">Apply for Death Certificate</div>
+            <div class="action-button card" onclick="location.href='request-relocation.html'">Request for Member's Relocation</div>
+            <div class="action-button card" onclick="location.href='report.html'">Report</div>
         </section>
     </main>
     <script src="scripts.js"></script>
