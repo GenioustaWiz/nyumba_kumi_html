@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wezekana - Report List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main{
+            height: 90vh;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .report-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .report-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .report-list li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wezekana Reports</h1>
+        <button class="menu-button" id="toggle-menu" onclick="toggleMenu()">menu</button>
+        
+        <nav id="navigation">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='chief.html'">Chief's Portal</button>
+            <button onclick="location.href='assistant-chief.html'">Assistant Chief's Portal</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h1>Wezekana Reports</h1>
+            <ul class="report-list">
+                <li onclick="location.href='wezekana-detail.html?id=1'">
+                    Complain: Noise Pollution - Submitted by John Doe
+                </li>
+                <li onclick="location.href='wezekana-detail.html?id=2'">
+                    Report: Illicit Brewing - Submitted by Jane Doe
+                </li>
+                <li onclick="location.href='wezekana-detail.html?id=3'">
+                    Complain: Garbage Dumping - Submitted by Alice Smith
+                </li>
+                <li onclick="location.href='wezekana-detail.html?id=4'">
+                    Report: Illegal Construction - Submitted by Bob Brown
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

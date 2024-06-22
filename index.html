@@ -5,12 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyumba Kumi Initiative</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .des-reg {
+            font-weight: 500;
+            margin: 20px 0 10px 0;
+        }
+        .des-reg a {
+            font-weight: 700;
+            color: green;
+        }
+        .des-reg a:hover {
+            font-weight: 700;
+            color: rgb(102, 239, 102);
+        }
+        .hidden {
+            display: none;
+        }
+        .error-message {
+            color: red;
+        }
+        .forgot-password {
+            margin-top: 10px;
+        }
+        .forgot-password a {
+            color: blue;
+            cursor: pointer;
+        }
+        .forgot-password a:hover {
+            color: darkblue;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Nyumba Kumi Initiative</h1>
         <button class="menu-button" id="toggle-menu" onclick="toggleMenu()">menu</button>
-        
         <nav id="navigation">
             <button onclick="location.href='chief.html'">Chief's Portal</button>
             <button onclick="location.href='assistant-chief.html'">Assistant Chief's Portal</button>
@@ -23,15 +52,58 @@
             <div class="description">
                 <h2>Welcome to the Nyumba Kumi Initiative</h2>
                 <p>The Nyumba Kumi Initiative aims to foster community unity and security by registering and maintaining information about every household in Kenya. Join us in making our neighborhoods safer and more connected.</p>
-                <button onclick="location.href='registration.html'">Click to Register</button>
+                <form id="verification-form">
+                    <div>
+                        <label for="id-number">Enter Your ID Number:</label>
+                        <input type="text" id="id-number" name="id-number" required>
+                        <p id="error-message" class="hidden error-message">ID or password incorrect. Please check or <a onclick="location.href='registration.html'">Click to Register</a>.</p>
+                    </div>
+                    <div>
+                        <label for="password">Enter Your Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="forgot-password">
+                    <a onclick="location.href='reset-password.html'">Forgot Password?</a>
+                </div>
+                <div class='des-reg'>
+                    Are You a New User? <a onclick="location.href='registration.html'">Click to Register</a>
+                </div>
             </div>
         </section>
     </main>
-
     <script src="scripts.js"></script>
-    
+    <script>
+        // ID and Password Verification
+        const validUsers = [
+            { id: '12345', password: '12345' },
+            { id: '23456', password: '23456' },
+            { id: '34567', password: '34567' },
+        ];
+        
+        const form = document.getElementById('verification-form');
+        const idInput = document.getElementById('id-number');
+        const passwordInput = document.getElementById('password');
+        const errorMessage = document.getElementById('error-message');
+
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const idNumber = idInput.value;
+                const password = passwordInput.value;
+                const user = validUsers.find(user => user.id === idNumber && user.password === password);
+
+                if (user) {
+                    alert('ID and password verified');
+                    window.location.href = 'userportal.html';
+                } else {
+                    errorMessage.classList.remove('hidden');
+                    idInput.classList.add('error');
+                    passwordInput.classList.add('error');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-
-
-

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wezekana - Report Detail</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main{
+            height: 90vh;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .report-detail {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .report-detail p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wezekana Report Detail</h1>
+        <button class="menu-button" id="toggle-menu" onclick="toggleMenu()">menu</button>
+        
+        <nav id="navigation">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='chief.html'">Chief's Portal</button>
+            <button onclick="location.href='assistant-chief.html'">Assistant Chief's Portal</button>
+            <button onclick="location.href='wezekan-list.html'">Wezekana List</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <div class="report-detail">
+                <h2>Complain: Noise Pollution</h2>
+                <p><strong>Submitted by:</strong> John Doe</p>
+                <p><strong>Description:</strong> There is constant noise coming from the construction site nearby, making it difficult to sleep at night.</p>
+                <p><strong>Location:</strong> Nairobi, Westlands</p>
+                <p><strong>Status:</strong> Under Investigation</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Use URLSearchParams to get the id parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const reportId = params.get('id');
+
+        // Dummy data for reports
+        const reports = {
+            1: {
+                title: "Complain: Noise Pollution",
+                submittedBy: "John Doe",
+                description: "There is constant noise coming from the construction site nearby, making it difficult to sleep at night.",
+                location: "Nairobi, Westlands",
+                status: "Under Investigation"
+            },
+            2: {
+                title: "Report: Illicit Brewing",
+                submittedBy: "Jane Doe",
+                description: "There are people brewing illicit alcohol in our neighborhood, causing disturbances.",
+                location: "Nairobi, Eastlands",
+                status: "Reported to Authorities"
+            },
+            3: {
+                title: "Complain: Garbage Dumping",
+                submittedBy: "Alice Smith",
+                description: "Someone is dumping garbage illegally in our area, creating a health hazard.",
+                location: "Mombasa, Nyali",
+                status: "Being Addressed"
+            },
+            4: {
+                title: "Report: Illegal Construction",
+                submittedBy: "Bob Brown",
+                description: "There is an illegal construction happening on public land near my house.",
+                location: "Kisumu, CBD",
+                status: "Authorities Notified"
+            }
+        };
+
+        // Populate the report details based on the id
+        const report = reports[reportId];
+
+        if (report) {
+            document.querySelector('.report-detail h2').textContent = report.title;
+            document.querySelector('.report-detail p:nth-of-type(1)').textContent = `Submitted by: ${report.submittedBy}`;
+            document.querySelector('.report-detail p:nth-of-type(2)').textContent = `Description: ${report.description}`;
+            document.querySelector('.report-detail p:nth-of-type(3)').textContent = `Location: ${report.location}`;
+            document.querySelector('.report-detail p:nth-of-type(4)').textContent = `Status: ${report.status}`;
+        } else {
+            document.querySelector('.report-detail').innerHTML = '<p>Report not found.</p>';
+        }
+    </script>
+</body>
+</html>

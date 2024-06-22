@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wezekana</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container {
+            display: none;
+            text-align: left;
+        }
+
+        .form-container form {
+            display: grid;
+            gap: 10px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wezekana</h1>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <div class="button-container">
+                <button id="file-complain-button">File Complain</button>
+                <button id="report-illicit-button">Report Illicit Brewers</button>
+            </div>
+
+            <div id="complain-form-container" class="form-container">
+                <h2>File Complain</h2>
+                <form id="complain-form">
+                    <label for="complainant-name">Your Name:</label>
+                    <input type="text" id="complainant-name" name="complainant-name" required>
+
+                    <label for="complain-description">Enter your Complain:</label>
+                    <textarea id="complain-description" name="complain-description" rows="5" required></textarea>
+
+                    <label for="complain-location">Location:</label>
+                    <input type="text" id="complain-location" name="complain-location" required>
+
+                    <button type="submit">Submit Complain</button>
+                </form>
+            </div>
+
+            <div id="illicit-brews-form-container" class="form-container">
+                <h2>Report Illicit Brewers</h2>
+                <form id="illicit-brews-form">
+                    <label for="reporter-name">Your Name:</label>
+                    <input type="text" id="reporter-name" name="reporter-name" required>
+
+                    <label for="brew-description">Enter Information:</label>
+                    <textarea id="brew-description" name="brew-description" rows="5" required></textarea>
+
+                    <label for="brew-location">Location:</label>
+                    <input type="text" id="brew-location" name="brew-location" required>
+
+                    <button type="submit">Submit Report</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('file-complain-button').addEventListener('click', function() {
+            document.getElementById('complain-form-container').style.display = 'block';
+            document.getElementById('illicit-brews-form-container').style.display = 'none';
+        });
+
+        document.getElementById('report-illicit-button').addEventListener('click', function() {
+            document.getElementById('complain-form-container').style.display = 'none';
+            document.getElementById('illicit-brews-form-container').style.display = 'block';
+        });
+
+        document.getElementById('complain-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Complain submitted successfully!');
+            document.getElementById('complain-form-container').style.display = 'none';
+        });
+
+        document.getElementById('illicit-brews-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Report submitted successfully!');
+            document.getElementById('illicit-brews-form-container').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

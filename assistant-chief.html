@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assistance Chief's Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .card{
+            cursor: alias;
+        }
+        .card:hover{
+            background: #a7bbbe;
+        }
+        .wezekana div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 20px;
+            background-color: #37ff8942;
+            padding: 5px;
+            border-radius: 10px;
+            margin-bottom: 3px;
+        }
+        .wezekana div:hover{
+            background-color: #275a3c42; 
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,11 +43,11 @@
             <h2>Assistance Chief's Dashboard</h2>
             <div class="grid-container">
                 <div class="card">
-                    <h3>Unapproved Users</h3>
+                    <h3>Unapproved Households</h3>
                     <p>10</p>
                 </div>
-                <div class="card">
-                    <h3>Approved Users</h3>
+                <div class="card" onclick="location.href='registered_households.html'">
+                    <h3>Approved Households</h3>
                     <p>50</p>
                 </div>
                 <div class="card">
@@ -37,8 +58,16 @@
                     <h3>Group Join Requests</h3>
                     <p>8</p>
                 </div>
+                <div class="card wezekana">
+                    <h3>Wezekana Reports</h3>
+                    <div>
+                        <p onclick="location.href='wezekana-list.html'">Complains</p> <p>5</p>
+                    </div>
+                    <div>
+                        <a onclick="location.href='wezekana-list.html'">Illicit Blews</a> <p>8</p>
+                    </div>
+                </div>
             </div>
-            <button class="view-households-button" onclick="location.href='registered_households.html'">View Registered Households</button>
         </section>
     </main>
 

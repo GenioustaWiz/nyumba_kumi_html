@@ -53,7 +53,7 @@ main {
     padding: 2em;
 }
 button {
-    margin: 0 1em;
+    /* margin: 0 1em; */
     padding: 0.5em 1em;
     background-color: #ffffff;
     color: #4CAF50;
