@@ -34,6 +34,12 @@
         .forgot-password a:hover {
             color: darkblue;
         }
+        .typing h2 {
+            color: green;
+            border-right: .15em solid green; /* Cursor */
+            white-space: nowrap;
+            overflow: hidden; /* Ensures the content is hidden until it's typed */
+        }
     </style>
 </head>
 <body>
@@ -50,7 +56,9 @@
     <main>
         <section id="home">
             <div class="description">
-                <h2>Welcome to the Nyumba Kumi Initiative</h2>
+                <div class="typing">
+                    <h2 id="welcome-text"></h2>
+                </div>
                 <p>The Nyumba Kumi Initiative aims to foster community unity and security by registering and maintaining information about every household in Kenya. Join us in making our neighborhoods safer and more connected.</p>
                 <form id="verification-form">
                     <div>
@@ -75,6 +83,26 @@
     </main>
     <script src="scripts.js"></script>
     <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const text = "Welcome to the Nyumba Kumi Initiative";
+            const welcomeText = document.getElementById('welcome-text');
+            let i = 0;
+
+            function typeWriter() {
+                if (i < text.length) {
+                    welcomeText.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    // Optional: Remove the cursor after typing is complete
+                    welcomeText.style.borderRight = 'none';
+                }
+            }
+
+            typeWriter();
+        });
+
         // ID and Password Verification
         const validUsers = [
             { id: '12345', password: '12345' },
